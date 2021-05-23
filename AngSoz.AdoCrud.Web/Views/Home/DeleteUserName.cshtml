@@ -1,0 +1,30 @@
+﻿
+@model AngSoz.AdoCrud.Web.Models.UserInfo
+
+@{
+    var username = Model;
+}
+<div class="text-left mt-5 mb-3">
+    <h3>Delete Username the List:</h3>
+</div>
+
+<form class="form-inline mb-5 d-flex justify-content-between border-danger bg-warning p-3" action="/Home/DeleteUserName" method="post">
+
+    <input class="form-control ds-input col-11" type="hidden" name="identif" value="@username.Id" />
+
+    
+        
+                <h6 scope="row">Id: <strong>@username.Id</strong></h6>
+                <h6>Username: <strong>@username.UserName</strong></h6>
+            
+        <button class="btn btn-secondary ml-2 mt-2" type="submit">Confirm Deletion</button>
+    
+
+    
+
+</form>
+
+<div class="container text-center bg-light py-5 mt-4">
+  <h5 class="mb-4">Cases wanted to see the list of registered names click on the button below.</h5>
+  <a class="btn btn-outline-primary" asp-action="List">Cancel</a>
+</div>

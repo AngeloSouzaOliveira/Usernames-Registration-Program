@@ -1,0 +1,26 @@
+﻿
+
+@model AngSoz.AdoCrud.Web.Models.UserInfo;
+
+
+<div class="text-center mt-5 mb-3">
+    <h4 class="display-4">Welcome <span class="destak">to</span> <br /> MVC <span class="destak">name</span> registration</h4>
+    <br />
+    <h5>Register your name in our database</h5>
+    <br />
+
+</div>
+
+<form class="form-inline mb-5 d-flex justify-content-between" action="/Home/Index" method="post">
+   
+        <input class="form-control ds-input col-sm-9 col-lg-9" type="text" asp-for="UserName" placeholder="Enter a UserName..." />
+        <button class="btn btn-secondary ml-2 col-sm-2" type="submit">Submit</button>
+
+</form>
+
+<div class=" container text-center bg-light py-5">
+    <h5 class="mb-4">Cases wanted to see the list of registered names click on the button below.</h5>
+    <a class="btn btn-outline-primary" asp-action="List">View List</a>
+</div>
+
+

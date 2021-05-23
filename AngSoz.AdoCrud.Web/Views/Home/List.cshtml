@@ -1,0 +1,40 @@
+﻿
+@model List<AngSoz.AdoCrud.Web.Models.UserInfo>
+
+@{
+    var ListUserName = Model;
+}
+
+<h3>Delete Username the List</h3>
+
+<table class="table">
+    <thead class="bg-primary text-white" >
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Username</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var username in ListUserName)
+        {
+            <tr>
+                <th scope="row">@username.Id</th>
+                <td>@username.UserName</td>
+                <td>
+                    <a href="Edit?identif=@username.Id">Edit</a>
+                </td>
+                <td>
+                    <a href="DeleteUserName?identif=@username.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class=" container text-center bg-light py-5">
+    <h5 class="mb-3">Go to Cadastre</h5>
+    <a class="btn btn-outline-primary" asp-action="Index">Cadastre</a>
+</div>

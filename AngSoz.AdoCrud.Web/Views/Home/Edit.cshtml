@@ -1,0 +1,24 @@
+﻿
+@model AngSoz.AdoCrud.Web.Models.UserInfo
+
+@{
+    var username = Model;
+}
+<div class="text-center mt-5 mb-3">
+    <h3>Edit Username</h3>
+</div>
+
+<form class="form-inline mb-5 d-flex justify-content-between" action="/Home/Edit" method="post">
+
+    Id: <input class="form-control ds-input col-2" type="text" name="identif" value="@username.Id" readonly />
+    Username: <input type="text" asp-for="UserName" value="@username.UserName" />
+    <br />
+    <br /><br />
+    <button class="btn btn-secondary ml-2" type="submit">Save</button>
+
+</form>
+
+<div class="container text-center bg-light py-5">
+    <h5 class="mb-4">Cases wanted to see the list of registered names click on the button below.</h5>
+    <a class="btn btn-outline-primary" asp-action="List">Cancel</a>
+</div>
